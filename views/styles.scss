@@ -1,0 +1,58 @@
+
+$main-color: #444;
+$main-bg: #eee;
+$sec-bg: #fff;
+$link: blue;
+$link-hover: green;
+$font:normal 100% Arial;
+$border-color:#ccc;
+$font-size-sm:80%;
+
+@mixin bordered($color, $width: 10px) {
+  border-width: $width;
+  border-color:$color;
+  border-style:solid;
+}
+body {
+ padding:20px;
+ margin:20px;
+ background:$main-bg;
+ font:$font;
+ color:$main-color;
+}
+a {
+  color:$link;
+}
+a:hover {
+  color:$link-hover;
+}
+ul {
+ padding:0;
+}
+ul > li {
+ margin:0 0 10px 0;
+ list-style:none;
+ padding-left:10px;
+ @include bordered($border-color, 0 0 0 10px);
+ position:relative;
+ & div {
+  position:absolute;
+  z-index:100;
+  left:100px;
+  top:-40px;
+  width:300px;
+  background:$sec-bg;
+  @include bordered($border-color, 4px);
+  display:none;
+  font-size:$font-size-sm;
+  padding:10px;
+ }
+ &:hover div {
+  display:block;	
+ }
+}
+img {
+  height:50px;
+  widht:50px;
+}
+

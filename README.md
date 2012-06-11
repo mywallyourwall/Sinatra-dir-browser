@@ -1,4 +1,11 @@
-Sinatra-dir-browser
-===================
+Ruby web server directory browser
+====================
 
-Sinatra dir browser (HAML, SASS, CS)
+
+Traverses directories and gives preview of child listing
+
+Built with:
+- Sinatra
+- HAML
+- SASS
+- Coffeescript
